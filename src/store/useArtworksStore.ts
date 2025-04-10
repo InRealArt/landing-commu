@@ -72,7 +72,7 @@ export const useArtworksStore = create<ArtworksState>((set, get) => ({
                     image2: artwork.imageUrl,
                     url: artwork.imageUrl,
                     url2: artwork.imageUrl,
-                    price: artwork.price,
+                    price: artwork.price ?? 0,
                     size: createMultiLangObject(''),
                     order: artwork.order || 0,
                     mockups: mockups,

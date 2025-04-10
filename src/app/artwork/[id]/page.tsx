@@ -90,6 +90,10 @@ export default function ArtworkPage() {
     ? artwork.name
     : (artwork.name && artwork.name.FR) || (artwork.name && Object.values(artwork.name)[0]) || '';
 
+  const doNothing = async () => {
+    console.log('do nothing')
+  }
+
   const handleEmailSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -160,7 +164,7 @@ export default function ArtworkPage() {
                 <p className="text-gray-400">{t('artwork.price')}</p>
                 <p className="text-2xl font-bold text-white">€{artwork.price || 'N/A'}</p>
               </div>
-              <form onSubmit={handleEmailSubmit} className="flex flex-col gap-4">
+              <form onSubmit={doNothing} className="flex flex-col gap-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
                     {t('artwork.enterEmail')}

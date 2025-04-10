@@ -40,7 +40,7 @@ export const usePresaleArtworkStore = create<PresaleArtworkState>((set) => ({
                 return {
                     id: artwork.id,
                     name: artwork.name,
-                    price: artwork.price,
+                    price: artwork.price ?? 0,
                     url: artwork.imageUrl,
                     artistName: `${artwork.artist.name} ${artwork.artist.surname}`
                 }

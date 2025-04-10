@@ -7,7 +7,7 @@ export interface PresaleArtworkData {
     name: string
     description: string | null
     order: number | null
-    price: number
+    price: number | null
     imageUrl: string
     mockupUrls: any
     artistId: number
@@ -105,7 +105,8 @@ export async function getPresaleArtworks(): Promise<PresaleArtworkData[]> {
             return {
                 ...artwork,
                 mockupUrls,
-                translations
+                translations,
+                price: artwork.price ?? 0
             }
         })
 

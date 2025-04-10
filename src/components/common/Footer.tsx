@@ -63,6 +63,10 @@ const Footer = () => {
     return EMAIL_REGEX.test(email)
   }
 
+  const doNothing = async () => {
+
+  }
+
   // Fonction pour soumettre l'email
   const handleSubscribe = async () => {
     // Vérifier si l'email est vide
@@ -181,7 +185,7 @@ const Footer = () => {
               <button
                 className={`absolute right-2 top-1/2 -translate-y-1/2 bg-[#6052FF] text-white rounded-full w-12 h-12 flex items-center justify-center border border-white ${isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-[#4F3EED] transition-colors'}`}
                 aria-label={t('buttons.subscribe')}
-                onClick={handleSubscribe}
+                onClick={doNothing}
                 disabled={isLoading}
               >
                 {isLoading ? (
